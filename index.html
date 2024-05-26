@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>film</title>
+  <title>Document</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body dir="rtl" >
@@ -92,11 +92,11 @@ fill="#000000" stroke="none">
   
   <div class="divchdark" >
     <p class="exitdiv" onclick="cloce2()">&times;</p>
-  <p class="textco1" onclick="dark1()">Dark</p>
+  <p class="textco1" id="#01204E" onclick="setcolor(this.id)">Dark</p>
   </div>
   
    <div class="divchdark">
-  <p class="textco" id="lightmode">Light</p>
+  <p class="textco" onclick="setcolor(this.id)" id="white">Light</p>
   </div>
   
   <div class="divchdark" id="themcolorshow">
@@ -192,78 +192,63 @@ fill="#000000" stroke="none">
 </div>
 
 <div id="menu">
+  
+  
   <p  onclick="clocediv1()" style="font-size: 34px; position: relative; top: -13px; left: -20px; color: #cccc;">&times;</p>
 
-  <!--Tab to edit-->
-
     
-    <h3 style="color: white; text-align: center; position: relative; top: -22px;">الافلام<h3>
     
-    <div class="filmback1">
-          <p class="film4">افلام عربي</p>
-    </div>
-
-<div class="filmback1">
-      <p class="film4">افلام اجنبي</p>
-</div>
-
-<div class="filmback1">
-       <p class="film4">افلام اسيوي</p>
-</div>
+    
 
 
-         <h3 style="color: white; text-align: center; position: relative; top: -19px;">مسلسلات<h3>
-
-<div class="filmback1">
-  
-
-          <p class="film4">مسلسلات عربي</p>
-</div>
-
-
-<div class="filmback1">
-
-      <p class="film4">
-      مسلسلات اجنبي</p>
-
-</div>
-
-<div class="filmback1">
-       <p class="film4"> مسلسلات اسيوي</p>
-      </div>
-      
-      
-      
-      <div class="filmback1">
-       <p class="film4"> مسلسلات انمي</p>
-       </div>
-       
-       
-       <div class="flexsocial">
-  
-         <div  class="whatsapp">
-           <img onclick="location.href='https://www.instagram.com/1s0oo?igsh=MXdodWx4emdrcDAyYw=='" style="width: 40px; position: relative; top: 7px;" src="instagram (1).png" alt="">
-         </div>
-         
-         <div class="telgram">
-           <img onclick="location.href='https://t.me/e0_o5'" style="width: 40px; position: relative; top: 7px;" srcset="" src="telegram (1).png" alt="">
-         </div>
-         
-         
-       </div>
-       
-       
-       
-       </div>
+ 
   
 
 
 
 
 
+<h3 style="text-align: center; margin-top: -20px;  color: orange;">افلام</h3>
+
+<h3 class="txtfilm">افلام عربي </h3>
+
+
+<h3 class="txtfilm">افلام اجنبي</h3>
+
+
+<h3 class="txtfilm">افلام اسيوي</h3>
+
+
+<h3 style="text-align: center; margin-top: 10px;  color: orange;">مسلسلات</h3>
+
+<h3 class="txtfilm">مسلسلات عربي </h3>
+<h3 class="txtfilm">مسلسلات اجنبي </h3>
+<h3 class="txtfilm">مسلسلات اسيوي </h3>
+
+
+<h3 style="text-align: center; margin-top: 13px;  color: orange;">انمي</h3>
+
+<h3 class="txtfilm"> انمي عربي </h3>
+<h3 class="txtfilm"> انمي اجنبي </h3>
 
 
 
+<div  style="display: flex; justify-content: space-around; margin-top: 65px;">
+  
+  
+  <div>
+  <img onclick="location.href='https://t.me/e0_o5'" class="icon" srcset="" src="telegram (1).png" alt="">
+</div>
+
+<div>
+  <img onclick="location.href='https://www.instagram.com/1s0oo?igsh=MXdodWx4emdrcDAyYw=='" class="icon" srcset="" src="instagram (1).png" alt="">
+</div>
+
+</div>
+
+
+
+</div>
 
 
 
@@ -308,20 +293,20 @@ function time(){
   
   <p style="color: black;  position: relative; top: -23px; margin-right: 20px;  font-size: 30px;" id="clocesearch">&times;</p>
   
-<input onkeyup="myFunction()"  placeholder="Search in website" type="text" class="inptext" id="myInput" title="Type in a name">
+<input onkeyup="myFunction()"  placeholder="Search Film in website" type="text" class="inptext" id="myInput" title="Type in a name">
 
 
 <div class="search3">
 <ul id="myUL">
-  <li><a href="#section2">film1</a></li>
-  <li><a href="#">film2</a></li>
+  <li><a href="#section2">Animals</a></li>
+  <li><a href="#">lion</a></li>
 
-  <li><a href="#">film3</a></li>
-  <li><a href="#">film4</a></li>
+  <li><a href="#">tiger</a></li>
+  <li><a href="#">graf</a></li>
 
-  <li><a href="#">film5</a></li>
-  <li><a href="#">film6</a></li>
-  <li><a href="#">.......</a></li>
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
 </ul>
   
 </div>
@@ -334,64 +319,9 @@ function time(){
 
 
 
-
-    <link rel="stylesheet" href="style.css" />
-    <!-- Boxicons CSS -->
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <i class="bx bx-cookie"></i>
-        <h2>Cookies Consent</h2>
-      </header>
-
-      <div class="data">
-        <p>This website use cookies to help you have a superior and more relevant browsing experience on the website. 
-        </p>
-      </div>
-
-      <div class="buttons">
-        <button class="button" id="acceptBtn">قبول</button>
-        <button class="button" id="declineBtn">الغاء</button>
-      </div>
-    </div>
-  </body>
-
-
-
-
-
-
-<div class="instrumentcookies" id="instrumentcookies">
-
-<p onclick="clocecookiest()">&times;</p>
   
-<h4 style="text-align: center; position: relative; top: -16px;">معلومات عن ملفات تعريف الارتباط</h4>
   
-  <li style="font-size: 15px ; border: none; margin-right: 10px" >يمكن لملفات تعريف الارتباط تخزين معلومات عنك</li>
   
-    <li style="font-size: 13px ; border: none; margin-right: 10px; margin-top: 13px;"  >يمكن لملفات تعريف الارتباط جمع معلومات عنك   مثل ip الهاتف</li>
-  
-      <li style="font-size: 12px ; border: none; margin-right: 10px; margin-top: 13px;"  >يمكن لملفات تعريف الارتباط حفظ البيانات التي ادخلتها لرويتها لاحقا </li>
-      
-          <li style="font-size: 13px ; border: none; margin-right: 10px; margin-top: 14px;"  > عند الغاء ملفات تعريف الارتباط لم ينفذ هذا</li>
-  
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
