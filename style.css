@@ -163,9 +163,10 @@ display: none;
   width: 80%;
   
   position: fixed;
-  top: 1%;
+  
   border-radius: 30px 30px 30px 30px;
-  height: 90vh;
+  height: calc(100% - 10px);
+  top: 5px;
   display: none;
   background-color:#0C2D57;
   z-index: 1;
