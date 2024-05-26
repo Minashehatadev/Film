@@ -236,6 +236,7 @@ cloceser.addEventListener('click',function(){
 
 
 
+
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -367,10 +368,28 @@ function showinstrument() {
 
 try {
   // Tab to edit
-  let name = "mina"
-  document.write(name1)
+  
   
 }catch(error){
   document.write(error)
   
 }
+
+
+
+
+
+
+
+
+
+
+var images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtk89YdHsM9txgR-mzcCZGSDl7313vkZq_xA&usqp=CAU", "https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQSAJ7aa9F6j2_I_xav2_EpuxH0CK_BlqCk9Ao5O1AqrvBt7md7eVdIICMccOtVkv9hu6tCI_qLv0hc7uy7e29dyR5DGUm-4Ert140s44TG2EGB4JNBdEdvwXL_n4GLRRz5LWHOnTsb9F8rrr7exBA15_0wE.jpg?r=bf5", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc4lASNk08eTDp7Y2yGhy86d8gXIqPsUMUNA&usqp=CAU"]; // Add your image file names here
+var index = 0;
+
+function changeImage() {
+  index = (index + 1) % images.length; // This will cycle the images indefinitely
+  document.getElementById("iosak").src = images[index];
+}
+
+setInterval(changeImage, 7000); // Change image every 10000 milliseconds (10 seconds)
