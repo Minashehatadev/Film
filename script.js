@@ -36,18 +36,45 @@ navigator.vibrate(20)
 
 
 
-function dark1() {
+
+function dark1(color8){
   // Tab to edit
-  document.body.style.background="#161616"
+  document.body.style.background = color8;
+  
+  localStorage.setItem('color1',color8);
 }
 
 
-let light = document.getElementById('lightmode');
 
 
-light.addEventListener('click',function(){
-  document.body.style.background="white"
-})
+if (localStorage.length > 0) {
+document.body.style.background= localStorage.getItem('color1');
+}
+
+
+let light = document.getElementById('white');
+
+
+
+function setcolor(color7) {
+  // Tab to edit
+  document.body.style.background=color7;
+  localStorage.setItem('color2',color7)
+  
+}
+
+
+if (localStorage.length > 0) {
+  document.body.style.background= localStorage.getItem('color2')
+}
+
+
+
+
+
+
+
+
 
 
 let btn2 = document.getElementById('colortwo');
@@ -102,6 +129,25 @@ btn5.addEventListener('click',function(){
 navigator.vibrate(50); // Vibrate 'SOS' in Morse.
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function cloce2() {
   // Tab to edit
@@ -260,39 +306,71 @@ window.addEventListener("load", function() {
 });
 
 
+let divcookies = document.getElementById('cookies');
+
+
+
+function clocecookies() {
+  // Tab to edit
+  divcookies.style.display="none"
+}
+
+function cloce2cookies() {
+  // Tab to edit
+  divcookies.style.display="none"
+}
+
+
+
+setTimeout(cookiesshow,6000)
 
 
 
 
+function cookiesshow() {
+  // Tab to edit
+  
+  divcookies.style.display="block"
+  
+}
 
 
 
 
+setTimeout(closkiesshow,10000)
+
+function closkiesshow() {
+  // Tab to edit
+  
+  divcookies.style.display="none"
+  document.getElementById('instrumentcookies').style.display="none"
+}
+
+let instrucookies = document.getElementById('instrumentcookies');
+
+
+function clocecookiest() {
+  // Tab to edit
+instrucookies.style.display="none"
+  
+  
+}
+
+
+function showinstrument() {
+  // Tab to edit
+  instrucookies.style.display="block"
+  
+}
 
 
 
-
-
-const cookieBox = document.querySelector(".wrapper"),
-  buttons = document.querySelectorAll(".button");
-
-const executeCodes = () => {
-  //if cookie contains codinglab it will be returned and below of this code will not run
-  if (document.cookie.includes("codinglab")) return;
-  cookieBox.classList.add("show");
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      cookieBox.classList.remove("show");
-
-      //if button has acceptBtn id
-      if (button.id == "acceptBtn") {
-        //set cookies for 1 month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
-        document.cookie = "cookieBy= codinglab; max-age=" + 60 * 60 * 24 * 30;
-      }
-    });
-  });
-};
-
-//executeCodes function will be called on webpage load
-window.addEventListener("load", executeCodes);
+try {
+  // Tab to edit
+  let name = "mina"
+  document.write(name1)
+  
+}catch(error){
+  document.write(error)
+  
+}
