@@ -36,37 +36,41 @@ navigator.vibrate(20)
 
 
 
+function dark1(color8) {
+    // Tab to edit
+    document.body.style.background = color8;
 
-function dark1(color8){
-  // Tab to edit
-  document.body.style.background = color8;
-  
-  localStorage.setItem('color1',color8);
+    localStorage.setItem('color1', color8);
 }
 
 
 
 
 if (localStorage.length > 0) {
-document.body.style.background= localStorage.getItem('color1');
+    document.body.style.background = localStorage.getItem('color1');
 }
 
 
-let light = document.getElementById('white');
+
 
 
 
 function setcolor(color7) {
-  // Tab to edit
-  document.body.style.background=color7;
-  localStorage.setItem('color2',color7)
-  
+    // Tab to edit
+    document.body.style.background = color7;
+    localStorage.setItem('color2', color7)
+
 }
 
 
 if (localStorage.length > 0) {
-  document.body.style.background= localStorage.getItem('color2')
+    document.body.style.background = localStorage.getItem('color2')
 }
+
+
+
+
+
 
 
 
@@ -82,7 +86,7 @@ let btn2 = document.getElementById('colortwo');
 let btn1 = document.getElementById('colorone');
 
 btn1.addEventListener('click',function(){
-document.body.style.color="black"
+document.body.style.color="#373A40"
 document.getElementById('header1').style.background="#F4F4F4";
 navigator.vibrate(50);
 })
@@ -129,25 +133,6 @@ btn5.addEventListener('click',function(){
 navigator.vibrate(50); // Vibrate 'SOS' in Morse.
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function cloce2() {
   // Tab to edit
@@ -215,7 +200,7 @@ iconse.addEventListener('click',function(){
   
   divs.style.display="block"
   navigator.vibrate(20)
-  
+darkdiv.style.display="none"
   document.getElementById('backgroundsearch').style.display="block"
   
   
@@ -230,7 +215,6 @@ cloceser.addEventListener('click',function(){
   document.getElementById('backgroundsearch').style.display="none"
   navigator.vibrate(20)
 })
-
 
 
 
@@ -307,71 +291,63 @@ window.addEventListener("load", function() {
 });
 
 
-let divcookies = document.getElementById('cookies');
-
-
-
-function clocecookies() {
-  // Tab to edit
-  divcookies.style.display="none"
-}
-
-function cloce2cookies() {
-  // Tab to edit
-  divcookies.style.display="none"
-}
-
-
-
-setTimeout(cookiesshow,6000)
 
 
 
 
-function cookiesshow() {
-  // Tab to edit
-  
-  divcookies.style.display="block"
-  
-}
 
 
 
 
-setTimeout(closkiesshow,10000)
-
-function closkiesshow() {
-  // Tab to edit
-  
-  divcookies.style.display="none"
-  document.getElementById('instrumentcookies').style.display="none"
-}
-
-let instrucookies = document.getElementById('instrumentcookies');
 
 
-function clocecookiest() {
-  // Tab to edit
-instrucookies.style.display="none"
+
+
+
+const cookieBox = document.querySelector(".wrapper"),
+  buttons = document.querySelectorAll(".button");
+
+const executeCodes = () => {
+  //if cookie contains codinglab it will be returned and below of this code will not run
+  if (document.cookie.includes("codinglab")) return;
+  cookieBox.classList.add("show");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      cookieBox.classList.remove("show");
+
+      //if button has acceptBtn id
+      if (button.id == "acceptBtn") {
+        //set cookies for 1 month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
+        document.cookie = "cookieBy= codinglab; max-age=" + 60 * 60 * 24 * 30;
+      }
+    });
+  });
+};
+
+//executeCodes function will be called on webpage load
+window.addEventListener("load", executeCodes);
+
+
+
+
   
   
-}
-
-
-function showinstrument() {
-  // Tab to edit
-  instrucookies.style.display="block"
   
-}
-
-
-
-try {
+function shareio() {
   // Tab to edit
   
-  
-}catch(error){
-  document.write(error)
+  navigator.share({
+      title: 'عنوان المشاركة',
+      text: 'نص المشاركة',
+      url: 'https://example.com', 
+    
+    
+    
+
+    
+  })
+
   
 }
 
@@ -381,15 +357,3 @@ try {
 
 
 
-
-
-
-var images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtk89YdHsM9txgR-mzcCZGSDl7313vkZq_xA&usqp=CAU", "https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQSAJ7aa9F6j2_I_xav2_EpuxH0CK_BlqCk9Ao5O1AqrvBt7md7eVdIICMccOtVkv9hu6tCI_qLv0hc7uy7e29dyR5DGUm-4Ert140s44TG2EGB4JNBdEdvwXL_n4GLRRz5LWHOnTsb9F8rrr7exBA15_0wE.jpg?r=bf5", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc4lASNk08eTDp7Y2yGhy86d8gXIqPsUMUNA&usqp=CAU"]; // Add your image file names here
-var index = 0;
-
-function changeImage() {
-  index = (index + 1) % images.length; // This will cycle the images indefinitely
-  document.getElementById("iosak").src = images[index];
-}
-
-setInterval(changeImage, 7000); // Change image every 10000 milliseconds (10 seconds)
