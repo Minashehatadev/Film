@@ -190,6 +190,7 @@ box-shadow: 0px 0px 5px #303146;
 input::placeholder{
   position: relative;
   left: 10px;
+  color: white;
 }
 #buttonsub{
   z-index: 1;
